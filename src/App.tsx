@@ -1,4 +1,9 @@
 import SplitScreen from "./components/splitScream"
+import { frameworks, langs } from "./data/datas"
+import IteratorList from "./components/lists"
+import BigInfoList from "./components/lists/langs/BigInfoList"
+import SmallInfoListFrameworks from "./components/lists/frameworks/smallList"
+import SmallInfoListLangs from "./components/lists/langs/smallListItems"
 
 function LeftSide() {
   return (
@@ -21,8 +26,9 @@ function App() {
     <>
       <h3>React avanaçado</h3>
       <SplitScreen>
-        <LeftSide />
-        <RightSide />
+        <IteratorList items={langs} sourceName="linguagem" ItemComponet={SmallInfoListLangs} />
+        <IteratorList items={frameworks} sourceName="framework" ItemComponet={SmallInfoListFrameworks} />
+
       </SplitScreen>
     </>
   )
