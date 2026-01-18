@@ -20,10 +20,11 @@ function App() {
   return (
     <>
       <h3>React avanaçado</h3>
-      <SplitScreen>
-        <LeftSide />
-        <RightSide />
-      </SplitScreen>
+      <SplitScreen Left={<LeftSide />} Right={<RightSide />} />
+      <h4>Devisão left menor que right</h4>
+      <SplitScreen Left={<LeftSide />} LeftWidth={1} Right={<RightSide />} rightWidth={3} />
+      <h4>Devisão right menor que left</h4>
+      <SplitScreen Left={<LeftSide />} LeftWidth={3} Right={<RightSide />} rightWidth={1} />
     </>
   )
 }
