@@ -1,4 +1,4 @@
-import SplitScream from "./components/01-splitScream"
+import SplitScreen from "./components/01-splitScream"
 
 function LeftSide() {
   return (
@@ -20,7 +20,7 @@ function App() {
   return (
     <>
       <h3>React avanaçado</h3>
-      <SplitScream Left={<LeftSide />} Right={<RightSide />} />
+      <SplitScreen Left={<LeftSide />} Right={<RightSide />} />
     </>
   )
 }

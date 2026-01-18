@@ -1,7 +1,8 @@
 import { style } from '@vanilla-extract/css';
 
 export const Container = style({
-  display: 'flex'
+  display: 'flex',
+  backgroundColor: '#f0f0f0',
 })
 
 
