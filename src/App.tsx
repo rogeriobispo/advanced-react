@@ -1,4 +1,4 @@
-import SplitScreen from "./components/01-splitScream"
+import SplitScreen from "./components/splitScream"
 
 function LeftSide() {
   return (
