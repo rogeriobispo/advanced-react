@@ -1,6 +1,7 @@
 import { Container, Panel } from "./index.css";
 
-const SplitScreen = ({ Left, Right, rightWidth = 1, LeftWidth = 1 }) => {
+const SplitScreen = ({ children, rightWidth = 1, LeftWidth = 1 }) => {
+  const [Left, Right] = children;
   return (
     <div className={Container}>
       <div className={Panel} style={{ flex: LeftWidth, backgroundColor: 'red' }}>
