@@ -1,12 +1,6 @@
-import SplitScreen from "./components/splitScream"
-import { frameworks, langs } from "./data/datas"
-import IteratorList from "./components/lists"
-import BigInfoList from "./components/lists/langs/BigInfoList"
-import SmallInfoListFrameworks from "./components/lists/frameworks/smallList"
-import SmallInfoListLangs from "./components/lists/langs/smallListItems"
-import Modal from "./components/modal"
-import UserFetchContainer from "./components/containerPattern/userFetchContainer"
 import UserDetail from "./components/containerPattern/userDatail"
+import GenericContainer from "./components/containerPattern/genericContainer"
+import TodoDetail from "./components/containerPattern/todoDetail"
 
 function LeftSide() {
   return (
@@ -28,9 +22,12 @@ function App() {
   return (
     <>
       <h3>React avanaçado</h3>
-      <UserFetchContainer>
+      <GenericContainer resourceUrl="https://jsonplaceholder.typicode.com/users/1" resourceName="user">
         <UserDetail />
-      </UserFetchContainer>
+      </GenericContainer>
+      <GenericContainer resourceUrl="https://jsonplaceholder.typicode.com/todos/1" resourceName="todo">
+        <TodoDetail />
+      </GenericContainer>
     </>
   )
 }
