@@ -1,5 +1,5 @@
 const UserDetail = ({ user }) => {
-
+  console.log(user)
   return (
     <div>
       <h2>User Detail</h2>
