@@ -4,6 +4,7 @@ import IteratorList from "./components/lists"
 import BigInfoList from "./components/lists/langs/BigInfoList"
 import SmallInfoListFrameworks from "./components/lists/frameworks/smallList"
 import SmallInfoListLangs from "./components/lists/langs/smallListItems"
+import Modal from "./components/modal"
 
 function LeftSide() {
   return (
@@ -25,11 +26,9 @@ function App() {
   return (
     <>
       <h3>React avanaçado</h3>
-      <SplitScreen>
-        <IteratorList items={langs} sourceName="linguagem" ItemComponet={SmallInfoListLangs} />
-        <IteratorList items={frameworks} sourceName="framework" ItemComponet={SmallInfoListFrameworks} />
-
-      </SplitScreen>
+      <Modal>
+        ola mundo modal
+      </Modal>
     </>
   )
 }
