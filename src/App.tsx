@@ -5,6 +5,8 @@ import BigInfoList from "./components/lists/langs/BigInfoList"
 import SmallInfoListFrameworks from "./components/lists/frameworks/smallList"
 import SmallInfoListLangs from "./components/lists/langs/smallListItems"
 import Modal from "./components/modal"
+import UserFetchContainer from "./components/containerPattern/userFetchContainer"
+import UserDetail from "./components/containerPattern/userDatail"
 
 function LeftSide() {
   return (
@@ -26,9 +28,9 @@ function App() {
   return (
     <>
       <h3>React avanaçado</h3>
-      <Modal>
-        ola mundo modal
-      </Modal>
+      <UserFetchContainer>
+        <UserDetail />
+      </UserFetchContainer>
     </>
   )
 }
