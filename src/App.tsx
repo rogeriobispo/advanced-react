@@ -1,6 +1,8 @@
 import UserDetail from "./components/containerPattern/userDatail"
 import GenericContainer from "./components/containerPattern/genericContainer"
 import TodoDetail from "./components/containerPattern/todoDetail"
+import DataSetContainer from "./components/containerPattern/dataSetContainer"
+import DataSetContainerWithRender from "./components/containerPattern/dataSetContainerWithRender"
 
 function LeftSide() {
   return (
@@ -17,17 +19,22 @@ function RightSide() {
     </div>
   )
 }
+const fetchTodos = async () => {
+  const response = await fetch('https://jsonplaceholder.typicode.com/todos/1')
+  return response.json()
+}
+
 function App() {
 
   return (
     <>
       <h3>React avanaçado</h3>
-      <GenericContainer resourceUrl="https://jsonplaceholder.typicode.com/users/1" resourceName="user">
-        <UserDetail />
-      </GenericContainer>
-      <GenericContainer resourceUrl="https://jsonplaceholder.typicode.com/todos/1" resourceName="todo">
+      <DataSetContainerWithRender
+        getData={async () => fetchTodos()}
+        render={(resource) => <TodoDetail todo={resource} />}
+      >
         <TodoDetail />
-      </GenericContainer>
+      </DataSetContainerWithRender>
     </>
   )
 }
