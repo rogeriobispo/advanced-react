@@ -1,4 +1,4 @@
-import { createRef, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 const ControlledForm = () => {
   const [name, setName] = useState("");

@@ -1,7 +1,7 @@
 import ControlledComponent from "./ components/controlled"
 import ControlledForm from "./ components/controlled/controlledForm"
 import ParentComponent from "./ components/controlled/parentComponent"
-import UncontrolledForm from "./ components/controlled/unctrolledForm"
+import UncontrolledForm from "./ components/uncontrolled/unctrolledForm"
 import UnControlledComponent from "./ components/uncontrolled"
 
 function App() {
