@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { ContainerModal, ModalBox } from "./modal.css";
 
 const ControlledModal = ({ children, show = false, handleDisplayModal }) => {
