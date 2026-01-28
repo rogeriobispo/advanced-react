@@ -1,5 +1,7 @@
-import React from "react";
-import ControledFlow from "./ components/controlled/flow";
+import withLoading from "./ components/HighOrderComponent";
+import fetchUserHOC from "./ components/HighOrderComponent/FetchUserHOC";
+import UserDetail from "./ components/HighOrderComponent/UserDetail";
+import UserList from "./ components/HighOrderComponent/UserList";
 
 const StepOne = ({ goToNextFlow }) => (
   <>
@@ -27,26 +29,15 @@ const StepThree = ({ goToNextFlow }) => (
 );
 
 function App() {
-  const [data, setData] = React.useState({});
-  const [currentFlow, setCurrentFlow] = React.useState(0);
 
-  const goToNextFlow = (dataFromStep) => {
-    setData((prevData) => ({ ...prevData, ...dataFromStep }));
-    console.log("Dados acumulados: ", { ...data, ...dataFromStep });
-    setCurrentFlow((prevFlow) => prevFlow + 1);
-  };
-
+  const UserListWithLoading = withLoading(UserList)
 
   return (
     <>
-      <h1>React avançado</h1>
-      <ControledFlow currentFlow={currentFlow} goToNextFlow={goToNextFlow}>
-        <StepOne />
-        <StepTwo />
-        <StepThree />
-      </ControledFlow>
-
+      <UserListWithLoading isLoading={true} />
+      <UserListWithLoading isLoading={false} users={[{ id: 1, name: "rogerio bispo" }]} />
     </>
+
   )
 }
 
