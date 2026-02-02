@@ -1,4 +1,5 @@
 import withLoading from "./ components/HighOrderComponent";
+import FetchUserHOC from "./ components/HighOrderComponent/FetchUserHOC";
 import fetchUserHOC from "./ components/HighOrderComponent/FetchUserHOC";
 import UserDetail from "./ components/HighOrderComponent/UserDetail";
 import UserList from "./ components/HighOrderComponent/UserList";
@@ -30,12 +31,11 @@ const StepThree = ({ goToNextFlow }) => (
 
 function App() {
 
-  const UserListWithLoading = withLoading(UserList)
+  const FetchUserWithHOC = fetchUserHOC(UserDetail, 1);
 
   return (
     <>
-      <UserListWithLoading isLoading={true} />
-      <UserListWithLoading isLoading={false} users={[{ id: 1, name: "rogerio bispo" }]} />
+      <FetchUserWithHOC />
     </>
 
   )
