@@ -1,8 +1,6 @@
-import withLoading from "./ components/HighOrderComponent";
-import FetchUserHOC from "./ components/HighOrderComponent/FetchUserHOC";
 import fetchUserHOC from "./ components/HighOrderComponent/FetchUserHOC";
 import UserDetail from "./ components/HighOrderComponent/UserDetail";
-import UserList from "./ components/HighOrderComponent/UserList";
+import UserInfoForm from "./ components/HighOrderComponent/UserInfoForm";
 
 const StepOne = ({ goToNextFlow }) => (
   <>
@@ -31,11 +29,9 @@ const StepThree = ({ goToNextFlow }) => (
 
 function App() {
 
-  const FetchUserWithHOC = fetchUserHOC(UserDetail, 1);
-
   return (
     <>
-      <FetchUserWithHOC />
+      <UserInfoForm />
     </>
 
   )
