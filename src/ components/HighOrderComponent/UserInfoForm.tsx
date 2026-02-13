@@ -1,6 +1,6 @@
-import UpdateUserHOC from "./UpdateUserHOC";
+import UpdateResourceHOC from "./UpdateResourceHOC";
 
-const UserInfoForm = UpdateUserHOC(({ user, onInputChange, onUpdateUser }) => {
+const UserInfoForm = UpdateResourceHOC(({ user, onInputChange, onUpdateUser }) => {
   if (!user) {
     return <div>Loading...</div>;
   }
@@ -21,6 +21,6 @@ const UserInfoForm = UpdateUserHOC(({ user, onInputChange, onUpdateUser }) => {
       </form>
     </div>
   );
-}, 1);
+}, "https://jsonplaceholder.typicode.com/users/1", "user");
 
 export default UserInfoForm;
