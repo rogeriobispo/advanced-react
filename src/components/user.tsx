@@ -1,10 +1,13 @@
-import useFetchUser from "../hooks/fetch-user";
+import useFetchResource from "../hooks/fetch-resource";
 
 const User = () => {
-  const user = useFetchUser(1);
+  const { data: user, loading, error } = useFetchResource("https://jsonplaceholder.typicode.com/users/1");
 
-  if (!user) {
+  if (loading) {
     return <div>Loading...</div>;
+  }
+  if (error) {
+    return <div>Error: {error}</div>;
   }
 
   return (

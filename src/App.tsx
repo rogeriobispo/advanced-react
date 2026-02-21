@@ -1,3 +1,4 @@
+import Todos from "./components/todos"
 import User from "./components/user"
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
     <>
       <h1>React avanaçado</h1>
       <User />
+      <Todos />
     </>
   )
 }
