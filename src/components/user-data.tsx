@@ -1,3 +1,4 @@
+import { useCallback } from "react";
 import useFetchData from "../hooks/fetch-data";
 
 const requestUser = async (url) => {
@@ -7,7 +8,12 @@ const requestUser = async (url) => {
 }
 
 const UserData = () => {
-  const { data: user } = useFetchData(() => requestUser("https://jsonplaceholder.typicode.com/users/1"));
+  const fetchUser = useCallback(
+    () => requestUser("https://jsonplaceholder.typicode.com/users/1"),
+    [],
+  )
+
+  const { data: user } = useFetchData(fetchUser);
 
   if (!user) return (<h1>Loading</h1>)
 
