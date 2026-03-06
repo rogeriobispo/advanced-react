@@ -1,13 +1,14 @@
-import Todos from "./components/todos"
-import User from "./components/user"
+import TodosData from "./components/todo-data"
+import UserData from "./components/user-data"
 
 function App() {
 
   return (
     <>
       <h1>React avanaçado</h1>
-      <User />
-      <Todos />
+      <UserData />
+      <hr />
+      <TodosData />
     </>
   )
 }
