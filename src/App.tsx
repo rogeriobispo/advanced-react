@@ -1,11 +1,13 @@
-import ParentComponent from "./ components/controlled/parentComponent"
-import UnControlledComponent from "./ components/uncontrolled"
+import { LargeWarningButton, MediumWarningButton, WarningButton } from "./components/composition"
 
 function App() {
 
   return (
     <>
-      <h1>React avanaçado</h1>
+      <h1>React avançado</h1>
+      <WarningButton text="Small!" />
+      <MediumWarningButton text="Medium!" />
+      <LargeWarningButton text="Large!" />
     </>
   )
 }
