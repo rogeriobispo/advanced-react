@@ -1,11 +1,13 @@
-import ParentComponent from "./ components/controlled/parentComponent"
-import UnControlledComponent from "./ components/uncontrolled"
+import { LargeRedButton, RedButton } from "./partialComponent"
 
 function App() {
 
+
   return (
     <>
-      <h1>React avanaçado</h1>
+      <h1>React avançado</h1>
+      <RedButton text="SmallRedButton!" />
+      <LargeRedButton text="LargeRedButton!" />
     </>
   )
 }
