@@ -1,9 +1,12 @@
+import Layout from "./layout"
+
 function App() {
 
   return (
-    <>
-      <h1>React avançado</h1>
-    </>
+    <Layout header="header" footer="footer" menu="menu">
+      <p>pagina princial</p>
+
+    </Layout>
   )
 }
 
