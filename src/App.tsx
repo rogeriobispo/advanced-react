@@ -1,10 +1,14 @@
+import Layout from "./layout"
 
 function App() {
 
   return (
-    <>
-      <h1>React avançado</h1>
-    </>
+    <Layout>
+      <Layout.Header>header</Layout.Header>
+      <Layout.Menu>menu</Layout.Menu>
+      <Layout.Body>body</Layout.Body>
+      <Layout.Footer>footer</Layout.Footer>
+    </Layout>
   )
 }
 
