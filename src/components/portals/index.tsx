@@ -19,17 +19,6 @@ const Portals = () => {
 
 export default Portals;
 
-const Alert = ({ children, onClose, show }) => {
-  if (!show) return null;
-
-  return (
-    <div onClick={onClose}>
-      {children}
-    </div>
-  )
-}
-
-
 
 const AlertPortal = ({ children, onClose, show }) => {
   if (!show) return null;
@@ -41,4 +30,15 @@ const AlertPortal = ({ children, onClose, show }) => {
     document.getElementById('portal-root')
   )
 }
+
+const Alert = ({ children, onClose, show }) => {
+  if (!show) return null;
+
+  return (
+    <div onClick={onClose}>
+      {children}
+    </div>
+  )
+}
+
 
