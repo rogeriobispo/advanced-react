@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
-import HeaveComponent from "./heaveComponent";
+import { useDeferredValue, useState } from "react";
+import { HeaveComponent } from "./heaveComponent";
 
 const DefferedValue = () => {
   const [name, setName] = useState('');
 
-  console.log('Renderizou');
+  const deferredName = useDeferredValue(name);
 
   return (
     <div>
@@ -13,7 +13,7 @@ const DefferedValue = () => {
         value={name}
         onChange={(e) => setName(e.target.value)}
       />
-      <HeaveComponent name={name} />
+      <HeaveComponent name={deferredName} />
     </div>
   )
 };

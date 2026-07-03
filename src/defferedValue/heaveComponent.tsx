@@ -1,4 +1,6 @@
-const HeaveComponent = ({ name }) => {
+import { memo } from "react";
+
+const Component = ({ name }) => {
   const init = performance.now();
   while (performance.now() - init < 200) {
     // Simulando um processamento pesado
@@ -11,4 +13,5 @@ const HeaveComponent = ({ name }) => {
     </div>
   );
 }
-export default HeaveComponent;
+export const HeaveComponent = memo(Component)
+
